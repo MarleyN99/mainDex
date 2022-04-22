@@ -8,7 +8,7 @@ import {
   NavBtnLink
 } from './NavbarElements';
 
-
+//Navbar component using imported sytledcomponents from navbarelements.
 const Navbar = () => {
     return (
       <>
@@ -31,7 +31,7 @@ const Navbar = () => {
             {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to='/signin'>Connect Wallet</NavBtnLink>
+            <NavBtnLink to='/'>Connect Wallet</NavBtnLink>
           </NavBtn>
         </Nav>
       </>

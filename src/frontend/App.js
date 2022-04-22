@@ -9,15 +9,18 @@ import NFT from './pages/nft';
 
   function App() {
     return (
+      //Route elements surrounded by fragment, components for each page passed as elements for routing.
+      <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' exact component={Home} />
-          <Route path='/transactions' component={Transactions} />
-          <Route path='/swaps' component={Swaps} />
-          <Route path='/nft' component={NFT} />
+          <Route path='/' exact element = { <Home/> } />
+          <Route path='/transactions' element = { <Transactions/> } />         
+          <Route path='/swaps' element = { <Swaps/> } />
+          <Route path='/nft' element = { <NFT/> } />
         </Routes>
       </Router>
+      </>
     );
   
 }
