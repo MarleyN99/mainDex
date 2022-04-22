@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
-const IERC20 = artifacts.require("IERC20");
-const TestUniswap = artifacts.require("TestUniswap");
+const IERC20 = require("@openzeppelin/contracts/token/ERC20/IERC20.sol");
+const TestUniswap = require("TestUniswap");
 const { DAI, WBTC, WBTC_WHALE } = require("./config");
 const BN = require("bn.js");
 

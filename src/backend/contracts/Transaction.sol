@@ -22,7 +22,7 @@ function addToBlockchain(address payable reciever, uint amount) public {
     //Incriment count for each contract call
     transactionCount += 1;
     //push transaction to list
-    transactions.push(TransferStruct(msg.sender, reciever, amount, , block.timestamp, ));
+    transactions.push(TransferStruct(msg.sender, reciever, amount, block.timestamp));
     //send transaction
     emit transfer(msg.sender, reciever, amount,block.timestamp);
 }
