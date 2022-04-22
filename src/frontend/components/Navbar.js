@@ -7,33 +7,34 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+import {  Button, Container } from 'react-bootstrap'
 
-//Navbar component using imported sytledcomponents from navbarelements.
-const Navbar = () => {
+//Navbar component using imported sytledcomponents from navbarelements. Takes in web3 handler and account address for connect button interaction
+const Navbar = ({web3Handler, account}) => {
     return (
       <>
         <Nav>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle>
             Homepage
           </NavLink>
           <Bars />
           <NavMenu>
-            <NavLink to='/transactions' activeStyle>
-              Transactions
-            </NavLink>
-            <NavLink to='/Swaps' activeStyle>
-              Swaps
-            </NavLink>
-            <NavLink to='/NFT' activeStyle>
-              NFT
-            </NavLink>
-            {/* Second Nav */}
-            {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+            <NavLink to='/transactions' activestyle>Transactions </NavLink>
+            <NavLink to='/Swaps' activestyle>Swaps </NavLink>
+            <NavLink to='/NFT' activestyle> NFT </NavLink>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/'>Connect Wallet</NavBtnLink>
-          </NavBtn>
-        </Nav>
+            { account ? (
+              
+              <NavBtn activestyle>
+                {account.slice(0, 5) + '...' + account.slice(38, 42)}
+              </NavBtn>
+              
+          ) : (
+            <NavBtn activestyle onClick={web3Handler}>Connect Wallet</NavBtn>
+            
+          )}
+          </Nav>
+        
       </>
     );
   };

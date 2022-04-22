@@ -55,15 +55,21 @@ export const NavMenu = styled.div`
 `;
 
 export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+display: flex;
+border-radius: 4px;
+background: #fe0;
+padding: 10px 22px;
+color: #425;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+
+&:hover {
+  transition: all 0.2s ease-in-out;
+  background: #f00;
+  color: #010606;
+}
 `;
 
 export const NavBtnLink = styled(Link)`
